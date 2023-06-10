@@ -1,11 +1,16 @@
 import { Component } from '@angular/core';
 
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'],
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  firstName = 'Angular_pratice'; //property
-  num = 200;
+ firstName = 'Shreya'; //property
+ num = 200; 
+
+
+
+  
 }
