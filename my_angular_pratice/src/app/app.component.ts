@@ -1,4 +1,3 @@
-import { BindingPipe } from '@angular/compiler';
 import { Component } from '@angular/core';
 
 @Component({
@@ -10,10 +9,10 @@ export class AppComponent {
   title = 'ANGULAR_PROJECT';
  //propertyName :datatype = value/data;
  //testcase1  
-  firstName : string = 'Pawar';  
+  firstName : string = 'poonam';  
 
   //testcase 2
-  firstName1 = 'pawarr';
+  firstName1 = 'poonam';
   firstName2! : string  ;
   surName2 : any;
   surName : any = true;

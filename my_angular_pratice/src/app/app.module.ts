@@ -5,16 +5,28 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 
 import { FormsModule } from '@angular/forms';
+import { AppRoutingModule } from './app-routing.module';
+import { SignUpComponent } from './sign-up/sign-up.component';
+import { LoginComponent } from './login/login.component';
+import { LandingComponent } from './landing/landing.component';
+import { DirectivesInAngularComponent } from './directives-in-angular/directives-in-angular.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    SignUpComponent,
+    LoginComponent,
+    LandingComponent,
+    DirectivesInAngularComponent,
+
     
   ],
   imports: [
     BrowserModule,
+    // AppRoutingModule,
     
-    FormsModule
+    FormsModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
