@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { FormGroup,FormBuilder,Validator, Validators } from '@angular/forms';
+import { TransferDataService } from '../transfer-data.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-sign-up',
@@ -12,14 +14,18 @@ export class SignUpComponent {
    //name!:string;
    student = {
     name: 'poonam',
+    mob:3457890123,
+    city:'Satara',
     age:30
    }
- constructor(private formBuilder : FormBuilder){
+ constructor(private formBuilder : FormBuilder, private transferDataService:TransferDataService,
+   private router:Router){
 
  }
     ngOnInit(){
       
-      this.signUpFormControlls()
+      this.signUpFormControlls();
+      this.transferDataService.studentData =this.student
     }
 
     signUpFormControlls(){
@@ -30,6 +36,14 @@ export class SignUpComponent {
         address:[''],
         gender:['male']
       })
+    }
+    submit(){
+      console.log(this.signUpForm.value);
+      this.transferDataService.userName =this.signUpForm.value.name;
+      this.router.navigateByUrl('landing')
+      this.transferDataService.listOfUsers =['poonam','pooja','nitin','shreya']
+      
+
     }
 
 }

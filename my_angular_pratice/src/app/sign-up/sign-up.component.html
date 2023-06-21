@@ -18,7 +18,7 @@
         <input type="text" formControlName="address"><br><br>
         <label>Gender </label>
         <input type="radio" formControlName="gender" value="male">Male<br>
-        <button [disabled]="!signUpForm.valid"> Submit </button>
+        <button (click)='submit()' [disabled]="!signUpForm.valid"> Submit </button>
     </form>
 </div>
 
