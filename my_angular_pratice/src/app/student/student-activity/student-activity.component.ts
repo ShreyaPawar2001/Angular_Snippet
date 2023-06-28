@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormGroup,FormBuilder,Validators } from '@angular/forms';
+import { DataServiceService } from '../data-service.service';
 
 @Component({
   selector: 'app-student-activity',
@@ -12,8 +13,10 @@ export class StudentActivityComponent {
   passwordValue : any;
   confirmPassValue : any;
   isMatch! : boolean
+  studentvalue1:any;
 
-  constructor(private fb: FormBuilder){}
+  constructor(private fb: FormBuilder, 
+    private dataServiceService : DataServiceService){}
 
   showForm(){
      this.showSignInForm = true;
@@ -48,6 +51,15 @@ export class StudentActivityComponent {
     else {
       this.isMatch = false;
     }
+  }
+  getData(){
+    this.studentvalue1= this.dataServiceService.studentData
+    console.log('studentData',this.studentvalue1);
+    let x = this.dataServiceService.test(40,50)
+    console.log();
+     
+    
+
   }
 
 }

@@ -10,6 +10,8 @@ export class LandingComponent {
   uName!:string;
   list:any;
   StudentData:any;
+  
+
  constructor(private router : Router, private transferDataService:TransferDataService){
 
  }
